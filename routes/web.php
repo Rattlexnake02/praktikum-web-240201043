@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/latihan-php', function () {
-    $nama = 'Nama Mahasiswa';
-    $nilai = [45, 20, 68, 50, 72];
+    $nama = 'Muhamad Isra Dwi Firmansya';
+    $nilai = [80, 75, 90, 85, 99];
  
     $hitungRataRata = function (array $data): float {
        $total = 0;
