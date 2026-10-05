@@ -19,19 +19,21 @@ Route::get('/latihan-php', function () {
         }
         return $total / count($data);
         };
- $rataRata = $hitungRataRata($nilai);
- if ($rataRata >= 75) {
- $status = 'Lulus';
- } else {
- $status = 'Perlu Perbaikan';
- }
- return view('latihan-php', compact(
- 'nama', 'nilai', 'rataRata', 'status'
- ));
+        
+        $rataRata = $hitungRataRata($nilai);
+        if ($rataRata >= 75) {
+            $status = 'Lulus';
+        } else {
+            $status = 'Perlu Perbaikan';
+        }
+ 
+        return view('latihan-php', compact(
+            'nama', 'nilai', 'rataRata', 'status'
+        ));
 });
 
-  Route::get('/form-mahasiswa', function () {
-       return view('form-mahasiswa');
+Route::get('/form-mahasiswa', function () {
+    return view('form-mahasiswa');
    });
 
 Route::post('/form-mahasiswa', function (Request $request) {
